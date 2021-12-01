@@ -21,10 +21,10 @@ const canvas = createCanvas(width, height);
 const ctx = canvas.getContext("2d");
 
 // Moralis creds
-const appId = "YOUR_MORALIS_APP_ID";
-const serverUrl = "YOUR_MORALIS_SERVER_URL";
-const masterKey = "YOUR_MORALIS_MASTER_KEY"; // DO NOT DISPLAY IN PUBLIC DIR
-const xAPIKey = "YOUR_X_API_KEY"; // DO NOT DISPLAY IN PUBLIC DIR
+const appId = "XZzxI67HVwEIQjK3rwXn547HkJIZe84oo5Eq8CBq";
+const serverUrl = "https://2cwoovqsfiip.usemoralis.com:2053/server";
+const masterKey = "5KRSv3vj10R22vag4nrA09XDx8XBHbLqF1RM5zpt"; // DO NOT DISPLAY IN PUBLIC DIR
+const xAPIKey = "aspqRK7RWi8AXXqjYhO70xddWRURVJv1jWTeK2C0wYGJmRAgcoHygR4rrMUdjfXD"; // DO NOT DISPLAY IN PUBLIC DIR
 // xAPIKey available here: https://deep-index.moralis.io/api-docs/#/storage/uploadFolder
 const api_url = "https://deep-index.moralis.io/api/v2/ipfs/uploadFolder";
 
@@ -47,8 +47,8 @@ const genColor = () => {
 };
 
 const drawBackground = () => {
-  ctx.fillStyle = genColor();
-  ctx.fillRect(0, 0, width, height);
+  // ctx.fillStyle = genColor();
+  // ctx.fillRect(0, 0, width, height);
 };
 
 // add metadata for individual nft edition
@@ -439,7 +439,7 @@ const startCreating = async () => {
 
   writeMetaData(JSON.stringify(metadataList));
   console.log("#########################################");
-  console.log("Welcome to Rekt City - Meet the Survivors");
+  console.log("Welcome to META LEAGUE - Meet the Players");
   console.log("#########################################");
   console.log();
 };

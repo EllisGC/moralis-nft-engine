@@ -117,17 +117,17 @@ const addRarityPercentForLayer = (_rarityId, _layerId, _percentages) => {
  *************************************************************/
 
 // image width in pixels
-const width = 1000;
+const width = 1505;
 // image height in pixels
-const height = 1000;
+const height = 2048;
 // description for NFT in metadata file
-const description = "Moralis Mutants - Survivors of Rekt City";
+const description = "MetaLeague Players Drop 01";
 // base url in case no unique metadata file i.e IPFS
-const baseImageUri = "YOUR_MORALIS_SERVER_URL";
+const baseImageUri = "https://2cwoovqsfiip.usemoralis.com:2053/server";
 // id for edition to start from
 const startEditionFrom = 1;
 // amount of NFTs to generate in edition
-const editionSize = 10;
+const editionSize = 2;
 // prefix to add to edition dna ids (to distinguish dna counts from different generation processes for the same collection)
 const editionDnaPrefix = 0;
 
@@ -145,20 +145,22 @@ let rarityWeights = [
 // for each layer, call 'addLayer' with the id and optionally the positioning and size
 // the id would be the name of the folder in your input directory, e.g. 'ball' for ./input/ball
 const layers = [
-  addLayer("Background", { x: 0, y: 0 }, { width: width, height: height }),
-  addLayer("Base Torso"),
-  addLayer("Base Head"),
-  addLayer("Torso"),
-  addLayer("Arms"),
-  addLayer("Mouths"),
-  addLayer("Eyes"),
-  addLayer("Accessories"),
-  addLayer("Noses"),
+  addLayer("CARD", { x: 0, y: 0 }, { width: width, height: height }),
+  addLayer("HEAD"),
+  addLayer("MOUTH"),
+  addLayer("NOSE"),
+  addLayer("EYES"),
+  addLayer("EYEBROWS"),
+  addLayer("BEARD"),
+  addLayer("EARRINGS"),
+  addLayer("HAIR"),
+  addLayer("UNIFORM"),
+  addLayer("ROLE"),
 ];
 
 // provide any specific percentages that are required for a given layer and rarity level
 // all provided options are used based on their percentage values to decide which layer to select from
-addRarityPercentForLayer("original", "Eyes", {
+addRarityPercentForLayer("original", "EYES", {
   super_rare: 0,
   rare: 0,
   original: 100,
