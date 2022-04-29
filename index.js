@@ -23,7 +23,7 @@ const ctx = canvas.getContext("2d");
 // Moralis creds
 const appId = "DZkQ5SLUD16fO7gzRlX6fd9qA90ufisNTw2THNSl";
 const serverUrl = "https://nwarwqrtlj2y.usemoralis.com:2053/server";
-
+const masterKey = "QIJwMLge8LBC09Et4CuaTwhaAp8Cs9ViMVAoPiGZ";
 const xAPIKey = "aspqRK7RWi8AXXqjYhO70xddWRURVJv1jWTeK2C0wYGJmRAgcoHygR4rrMUdjfXD"; // DO NOT DISPLAY IN PUBLIC DIR
 // xAPIKey available here: https://deep-index.moralis.io/api-docs/#/storage/uploadFolder
 const api_url = "https://deep-index.moralis.io/api/v2/ipfs/uploadFolder";
@@ -31,13 +31,13 @@ const api_url = "https://deep-index.moralis.io/api/v2/ipfs/uploadFolder";
 Moralis.start({ serverUrl, appId, masterKey });
 
 // adds a signature to the top left corner of the canvas for pre-production
-const signImage = (_sig) => {
+/* const signImage = (_sig) => {
   ctx.fillStyle = "#000000";
   ctx.font = "bold 30pt Helvetica";
   ctx.textBaseline = "top";
   ctx.textAlign = "left";
   ctx.fillText(_sig, 40, 40);
-};
+}; */
 
 // generate a random color hue
 const genColor = () => {
@@ -359,7 +359,7 @@ const startCreating = async () => {
           attributesList.push(getAttributeForElement(element));
         });
         // add an image signature as the edition count to the top left of the image
-        signImage(`#${editionCount}`);
+        // signImage(`#${editionCount}`);
         // write the image to the output directory
       });
       dnaListByRarity[rarity].push(newDna);
