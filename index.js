@@ -21,9 +21,9 @@ const canvas = createCanvas(width, height);
 const ctx = canvas.getContext("2d");
 
 // Moralis creds
-const appId = "XZzxI67HVwEIQjK3rwXn547HkJIZe84oo5Eq8CBq";
-const serverUrl = "https://2cwoovqsfiip.usemoralis.com:2053/server";
-const masterKey = "5KRSv3vj10R22vag4nrA09XDx8XBHbLqF1RM5zpt"; // DO NOT DISPLAY IN PUBLIC DIR
+const appId = "DZkQ5SLUD16fO7gzRlX6fd9qA90ufisNTw2THNSl";
+const serverUrl = "https://nwarwqrtlj2y.usemoralis.com:2053/server";
+
 const xAPIKey = "aspqRK7RWi8AXXqjYhO70xddWRURVJv1jWTeK2C0wYGJmRAgcoHygR4rrMUdjfXD"; // DO NOT DISPLAY IN PUBLIC DIR
 // xAPIKey available here: https://deep-index.moralis.io/api-docs/#/storage/uploadFolder
 const api_url = "https://deep-index.moralis.io/api/v2/ipfs/uploadFolder";

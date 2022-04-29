@@ -117,54 +117,53 @@ const addRarityPercentForLayer = (_rarityId, _layerId, _percentages) => {
  *************************************************************/
 
 // image width in pixels
-const width = 1505;
+const width = 600;
 // image height in pixels
-const height = 2048;
+const height = 600;
 // description for NFT in metadata file
-const description = "MetaLeague Players Drop 01";
+const description = "Shark Pack NFT Collection";
 // base url in case no unique metadata file i.e IPFS
-const baseImageUri = "https://2cwoovqsfiip.usemoralis.com:2053/server";
+const baseImageUri = "https://nwarwqrtlj2y.usemoralis.com:2053/server";
 // id for edition to start from
 const startEditionFrom = 1;
 // amount of NFTs to generate in edition
-const editionSize = 2;
+const editionSize = 10;
 // prefix to add to edition dna ids (to distinguish dna counts from different generation processes for the same collection)
 const editionDnaPrefix = 0;
 
 // create required weights
 // for each weight, call 'addRarity' with the id and from which to which element this rarity should be applied
 let rarityWeights = [
-  /* 
-  addRarity("super_rare", 1, 1),
-  addRarity("rare", 1, 1),
-  */
-  addRarity("original", 1, editionSize),
+  
+  addRarity("super_rare", 9, 10),
+  addRarity("rare", 6, 9),
+  addRarity("original",1, 5),
+
 ];
 
 // create required layers
 // for each layer, call 'addLayer' with the id and optionally the positioning and size
 // the id would be the name of the folder in your input directory, e.g. 'ball' for ./input/ball
 const layers = [
-  addLayer("CARD", { x: 0, y: 0 }, { width: width, height: height }),
-  addLayer("HEAD"),
-  addLayer("MOUTH"),
-  addLayer("NOSE"),
-  addLayer("EYES"),
-  addLayer("EYEBROWS"),
-  addLayer("BEARD"),
-  addLayer("EARRINGS"),
-  addLayer("HAIR"),
-  addLayer("UNIFORM"),
-  addLayer("ROLE"),
+  addLayer("Background", { x: 0, y: 0 }, { width: width, height: height }),
+  addLayer("Skins"),
+  addLayer("Base"),
+  addLayer("Mouth"),
+  addLayer("Eyes"),
+  addLayer("Clothes"),
+  addLayer("Hats"),
+
 ];
 
 // provide any specific percentages that are required for a given layer and rarity level
 // all provided options are used based on their percentage values to decide which layer to select from
-addRarityPercentForLayer("original", "EYES", {
-  super_rare: 0,
-  rare: 0,
-  original: 100,
+addRarityPercentForLayer("Eyes", {
+  super_rare: 10,
+  rare: 30,
+  original: 60,
 });
+
+
 
 module.exports = {
   layers,
